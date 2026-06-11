@@ -11,9 +11,8 @@ import com.example.laboratorio_5_carlos_cruz.ui.screens.HomeScreen
 import com.example.laboratorio_5_carlos_cruz.viewmodel.TaskViewModel
 
 @Composable
-fun TaskApp(){
+fun TaskApp(viewModel: TaskViewModel){
     val navController = rememberNavController()
-    val taskViewModel: TaskViewModel= viewModel()
 
     NavHost(navController=navController, startDestination="button_screen"){
         composable("button_screen") {
@@ -24,17 +23,9 @@ fun TaskApp(){
 
         composable("home_screen") {
             HomeScreen(
-                viewModel=taskViewModel,
+                viewModel=viewModel,
                 onBack = {navController.popBackStack()}
-//                onNavigateToCreate = {navController.navigate("create_task")}
             )
         }
-
-//        composable("create_task"){
-//            CreateTask(
-//                viewModel=taskViewModel,
-//                onDismiss = {navController.popBackStack()}
-//            )
-//        }
     }
 }

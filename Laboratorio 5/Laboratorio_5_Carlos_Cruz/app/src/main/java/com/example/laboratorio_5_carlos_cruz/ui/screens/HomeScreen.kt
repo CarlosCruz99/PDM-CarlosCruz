@@ -24,7 +24,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.laboratorio_5_carlos_cruz.data.local.entities.TaskEntity
-import com.example.laboratorio_5_carlos_cruz.data.model.Task
 import com.example.laboratorio_5_carlos_cruz.ui.view.TaskCard
 import com.example.laboratorio_5_carlos_cruz.viewmodel.TaskViewModel
 

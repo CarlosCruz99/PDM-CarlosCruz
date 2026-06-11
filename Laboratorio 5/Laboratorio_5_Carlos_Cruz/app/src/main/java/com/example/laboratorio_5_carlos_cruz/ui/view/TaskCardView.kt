@@ -1,6 +1,5 @@
 package com.example.laboratorio_5_carlos_cruz.ui.view
 
-import com.example.laboratorio_5_carlos_cruz.data.model.Task
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
