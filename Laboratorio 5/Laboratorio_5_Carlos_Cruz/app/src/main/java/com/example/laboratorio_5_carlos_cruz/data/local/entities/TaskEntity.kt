@@ -6,10 +6,10 @@ import java.util.Date
 
 @Entity(tableName = "tasks")
 data class TaskEntity (
-    @PrimaryKey
-    val id: Int,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     val title: String,
     val description: String,
-    val endDate: Date = Date(),
+    val endDate: Date,
     val isCompleted: Boolean = false
 )

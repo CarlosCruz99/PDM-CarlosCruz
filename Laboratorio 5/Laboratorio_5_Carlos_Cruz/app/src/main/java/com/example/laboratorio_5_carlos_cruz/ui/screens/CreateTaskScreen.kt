@@ -24,14 +24,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import java.util.Date
 
 @Composable
 fun CreateTask(
     onDismiss: () -> Unit,
-    onTaskCreated: (String, String) -> Unit
+    onTaskCreated: (String, String, Date, Boolean) -> Unit
 ){
     var title by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
+    var date: Date = Date()
+    var isCompleted: Boolean = false
+
     Dialog(
         onDismissRequest = {
             onDismiss()
@@ -83,7 +87,7 @@ fun CreateTask(
 
                 Button(onClick = {
                     if (title.isNotBlank()){
-                        onTaskCreated(title,description)
+                        onTaskCreated(title, description, date, isCompleted)
                     }
                 },
                     enabled = title.isNotBlank()) {

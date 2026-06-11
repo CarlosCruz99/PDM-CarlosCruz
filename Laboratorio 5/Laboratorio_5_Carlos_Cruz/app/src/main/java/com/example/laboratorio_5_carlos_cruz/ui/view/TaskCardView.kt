@@ -13,10 +13,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.laboratorio_5_carlos_cruz.data.local.entities.TaskEntity
 
 @Composable
 fun TaskCard(
-    task: Task,
+    task: TaskEntity,
     modifier: Modifier = Modifier
 ) {
     Card(
