@@ -58,7 +58,7 @@ fun HomeScreen(
             items(tasks.value){
                     task ->
                 //Componente que es una card
-                TaskCard(task)
+                TaskCard(task=task, onDeleteTask = {viewModel.deleteTask(it)})
                 Spacer(modifier = Modifier.height(24.dp))
             }
         }

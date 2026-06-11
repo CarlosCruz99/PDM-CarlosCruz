@@ -29,6 +29,12 @@ class TaskViewModel(private val dao: TaskDao): ViewModel() {
             dao.insertTask(task)
         }
     }
+
+    fun deleteTask(task: TaskEntity){
+        viewModelScope.launch {
+            dao.deleteTask(task)
+        }
+    }
 }
 
 class MenuViewModelFactory(private val dao: TaskDao) : ViewModelProvider.Factory {
