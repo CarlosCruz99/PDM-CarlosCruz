@@ -21,7 +21,7 @@ fun ButtonScreen(
 ){
     Scaffold(
         topBar ={
-            TopAppBar(title={ Text("Laboratorio 4") })
+            TopAppBar(title={ Text("Laboratorio 5") })
         }
     ){
         //padding ->
